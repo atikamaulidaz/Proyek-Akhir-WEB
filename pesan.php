@@ -47,8 +47,15 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="gambar" class="pesan-item">
+<<<<<<< HEAD
                 <center><li><button><a href="beranda.php" class="button-batal" style="text-decoration: none ; "> Batal</li></button></a> </center>
                 <input type="submit" name="submit" value="Order" class="button-order">
+=======
+                <table>
+                    <td><a href="beranda.php" class="button-batal">Batal</a></td>
+                    <td><input type="submit" name="submit" value="Order" class="button-order"></td>
+                </table>
+>>>>>>> 4372ed103102260627fa07694fef1d374c236c34
                 </form>
             </center>
         </div>
