@@ -38,7 +38,7 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="telpon" class="pesan-item"><br>
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-                <p>Jenis Laundry</p><br>
+                <p><b>Jenis Laundry</b></p><br>
                 <p><input type="radio" name="jenis" value="Reguler Ekonomis" />Reguler Ekonomis</p> <br>
                 <p><input type="radio" name="jenis" value="Laundry Exclusive" />Laundry Exclusive</p><br>
                 <p><input type="radio" name="jenis" value="Laundry Sepatu" />Laundry Sepatu</p> <br>

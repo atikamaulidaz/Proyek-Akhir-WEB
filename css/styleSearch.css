@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-    body .header .main .footer .tabel center {
+    body .header .nama-header .list-header .cari  .main .logo .penawaran .penawaran-item .footer .nama-footer .tabel center .pesananBox .pesanan .loginBox .login .about-me .data .data-item .regisBox .regis table td tr tbody{
         width: auto;
     }
 }
@@ -8,13 +8,13 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
-  }
-  
+}
+
 .search {
     padding: 10px 5px;
     width: 500px;
 }
-  
+
 .button-search {
     padding: 10px;
     width: 100px;
