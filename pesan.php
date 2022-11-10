@@ -53,8 +53,10 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="gambar" class="pesan-item">
-                <a href="beranda.php" class="button-order">Batal</a>
-                <input type="submit" name="submit" value="Order" class="button-order">
+                <table>
+                    <td><a href="beranda.php" class="button-batal">Batal</a></td>
+                    <td><input type="submit" name="submit" value="Order" class="button-order"></td>
+                </table>
                 </form>
             </center>
                 

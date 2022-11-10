@@ -70,7 +70,6 @@ li {
     margin-right: 117px;
     border-radius: 50%;
     width: auto;
-   
 }
 
 .penawaran-item p{
@@ -195,4 +194,36 @@ label{
 	border: none;
 	border-radius: 10px;
 	padding: 10px 20px;
+}
+
+.button-batal{
+    background: rgb(142, 142, 255);
+    color: black;
+    font-size: 11pt;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.button-batal:hover {
+    background-color: rgb(61, 61, 124);
+}
+
+.button-order {
+    background: rgb(142, 142, 255);
+    color: black;
+    font-size: 11pt;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.button-order:hover {
+    background-color: rgb(61, 61, 124);
 }
