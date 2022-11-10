@@ -38,8 +38,8 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="telpon" class="pesan-item"><br>
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-                <p>Jenis Laundry</p><br>
-                <p><input type="radio" name="jenis" value="Reguler Ekonomis" />Reguler Ekonomis</p> <br>
+                <p>Jenis Laundry : </p><br>
+                <p><input type="radio"  name="jenis" value="Reguler Ekonomis" />Reguler Ekonomis</p> <br>
                 <p><input type="radio" name="jenis" value="Laundry Exclusive" />Laundry Exclusive</p><br>
                 <p><input type="radio" name="jenis" value="Laundry Sepatu" />Laundry Sepatu</p> <br>
                 <p><input type="radio" name="jenis" value="Laundry Bed Cover" />Laundry Bed Cover</p><br>
@@ -47,7 +47,7 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="gambar" class="pesan-item">
-                <a href="beranda.php" class="button-order">Batal</a>
+                <center><li><button><a href="beranda.php" class="button-batal" style="text-decoration: none ; "> Batal</li></button></a> </center>
                 <input type="submit" name="submit" value="Order" class="button-order">
                 </form>
             </center>

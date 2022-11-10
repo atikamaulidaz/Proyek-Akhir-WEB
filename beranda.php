@@ -15,7 +15,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div class="header">
-        <div class="nama-header">Laundry Express</div>
+        <div class="nama-header" >Laundry Express</div>
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
