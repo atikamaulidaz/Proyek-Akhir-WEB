@@ -41,13 +41,13 @@ if (!isset($_SESSION['login'])) {
                 <label for="jenis">Jenis Laundry</label><br>
                 <!-- <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p>
                 <input type="text" name="jenis" class="pesan-item"><br> -->
-                <input type="radio" name="jenis" class="pesan-item" value="">
+                <input type="radio" name="jenis" class="pesan-item" value="Regular Ekonomis">
                 <label for="jenis">Regular Ekonomis</label>
-                <input type="radio" name="jenis" class="pesan-item" value="">
+                <input type="radio" name="jenis" class="pesan-item" value="Laundry Exclusive">
                 <label for="jenis">Laundry Exclusive</label>
-                <input type="radio" name="jenis" class="pesan-item" value="">
+                <input type="radio" name="jenis" class="pesan-item" value="Laundry Sepatu">
                 <label for="jenis">Laundry Sepatu</label><br>
-                <input type="radio" name="jenis" class="pesan-item" value="">
+                <input type="radio" name="jenis" class="pesan-item" value="Laundry Bed Cover">
                 <label for="jenis">Laundry Bed Cover</label><br><br>
                 <label for="nama_gambar">Nama File</label>
                 <input type="text" name="nama_gambar" class="pesan-item">
