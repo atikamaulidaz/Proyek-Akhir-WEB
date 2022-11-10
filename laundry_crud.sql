@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 03:28 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.0.23
+-- Waktu pembuatan: 10 Nov 2022 pada 05.12
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gambar`
+-- Struktur dari tabel `gambar`
 --
 
 CREATE TABLE `gambar` (
@@ -36,7 +36,7 @@ CREATE TABLE `gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `gambar`
+-- Dumping data untuk tabel `gambar`
 --
 
 INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
@@ -47,7 +47,25 @@ INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `laundry`
+-- Struktur dari tabel `history`
+--
+
+CREATE TABLE `history` (
+  `id_history` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `nama` varchar(64) NOT NULL,
+  `alamat` varchar(64) NOT NULL,
+  `jenis` varchar(64) NOT NULL,
+  `nama_file` varchar(64) NOT NULL,
+  `file` varchar(64) NOT NULL,
+  `waktu` datetime(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `laundry`
 --
 
 CREATE TABLE `laundry` (
@@ -60,7 +78,7 @@ CREATE TABLE `laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `laundry`
+-- Dumping data untuk tabel `laundry`
 --
 
 INSERT INTO `laundry` (`id`, `nama`, `alamat`, `telpon`, `email`, `jenis`) VALUES
@@ -71,7 +89,7 @@ INSERT INTO `laundry` (`id`, `nama`, `alamat`, `telpon`, `email`, `jenis`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -82,7 +100,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `nama`, `username`, `password`) VALUES
@@ -96,55 +114,76 @@ INSERT INTO `user` (`id`, `nama`, `username`, `password`) VALUES
 --
 
 --
--- Indexes for table `gambar`
+-- Indeks untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
   ADD PRIMARY KEY (`id_gambar`),
   ADD KEY `id` (`id`);
 
 --
--- Indexes for table `laundry`
+-- Indeks untuk tabel `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`id_history`),
+  ADD KEY `history_ibfk_1` (`id_user`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indeks untuk tabel `laundry`
 --
 ALTER TABLE `laundry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `gambar`
+-- AUTO_INCREMENT untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
   MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `laundry`
+-- AUTO_INCREMENT untuk tabel `history`
+--
+ALTER TABLE `history`
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `laundry`
 --
 ALTER TABLE `laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `gambar`
+-- Ketidakleluasaan untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
   ADD CONSTRAINT `gambar_ibfk_1` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `history`
+--
+ALTER TABLE `history`
+  ADD CONSTRAINT `history_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `history_ibfk_2` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
