@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if (!isset($_SESSION['login']) && ($_SESSION['username'] == "admin") && ($_SESSION['password'] == "admin123")){
-    header("Location: admin.php");
+    header("Location: login.php");
 }
 require "koneksi.php";
 ?>
@@ -23,7 +23,6 @@ require "koneksi.php";
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
-                <li><a href="http://localhost/PA_WEB/beranda-admin.php" style="text-decoration: none;">Home</a></li>
                 <li><a href="logout.php" style="text-decoration: none;">Logout</a></li>
             </ul> 
         </div>
@@ -69,7 +68,6 @@ require "koneksi.php";
                     $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
                 }
                 $i = 1;
-                // $query = mysqli_query($db, "SELECT * FROM laundry");
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>
                 <tr>

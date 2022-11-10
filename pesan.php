@@ -38,14 +38,22 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="telpon" class="pesan-item"><br>
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-                <label for="">Jenis Laundry</label><br>
-                <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p>
-                <input type="text" name="jenis" class="pesan-item"><br>
+                <label for="jenis">Jenis Laundry</label><br>
+                <!-- <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p>
+                <input type="text" name="jenis" class="pesan-item"><br> -->
+                <input type="radio" name="jenis" class="pesan-item" value="">
+                <label for="jenis">Regular Ekonomis</label>
+                <input type="radio" name="jenis" class="pesan-item" value="">
+                <label for="jenis">Laundry Exclusive</label>
+                <input type="radio" name="jenis" class="pesan-item" value="">
+                <label for="jenis">Laundry Sepatu</label><br>
+                <input type="radio" name="jenis" class="pesan-item" value="">
+                <label for="jenis">Laundry Bed Cover</label><br><br>
                 <label for="nama_gambar">Nama File</label>
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="gambar" class="pesan-item">
-                <a  class="button-order" href="beranda.php">Batal</a>
+                <a href="beranda.php" class="button-order">Batal</a>
                 <input type="submit" name="submit" value="Order" class="button-order">
                 </form>
             </center>

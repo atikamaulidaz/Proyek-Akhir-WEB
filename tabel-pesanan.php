@@ -23,18 +23,13 @@ require "koneksi.php";
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
-                <li><a href="http://localhost/PA_WEB/beranda.php" style="text-decoration: none;">Home</a></li>
-                <li><a href="aboutme.php" style="text-decoration: none;">About Me</a></li>
+                <li><a href="http://localhost/Proyek-Akhir-WEB/beranda.php" style="text-decoration: none;">Home</a></li>
+                <li><a href="profile.php" style="text-decoration: none;">Profile</a></li>
+                <li><a href="pesan.php" style="text-decoration: none;">Buat Pesanan</a></li>
+                <li><a href="tabel-pesanan.php" style="text-decoration: none;">Lihat Pesanan</a></li>
                 <li><a href="logout.php" style="text-decoration: none;">Logout</a></li>
             </ul> 
         </div>
-    </div>
-    <br><br>
-    <div class="cari">
-        <form action="" method="get">
-            <input type="search" name="search" id="search" placeholder="Cari Nama" class="search">
-            <input type="submit" name="submit" value="CARI" class="button-search">
-        </form>
     </div>
     <br><br>
     <div class="tabel center" style="overflow-x: auto;">

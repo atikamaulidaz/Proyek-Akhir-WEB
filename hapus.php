@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
   if($query){
     unlink('gambar/'.$gambar_lama);
     $query_gambar = mysqli_query($db, "DELETE FROM gambar WHERE id = $_GET[id]");
-    header("Location:data.php");
+    header("Location:tabel-pesanan.php");
   } 
   else {
     echo "Hapus Pesanan Gagal";

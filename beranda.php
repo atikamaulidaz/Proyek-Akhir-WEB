@@ -12,9 +12,6 @@ if (!isset($_SESSION['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>Beranda</title>
-    <script>
-        alert("Selamat Datang Di Website Laundry Express");
-    </script>
 </head>
 <body>
     <div class="header">
@@ -22,9 +19,10 @@ if (!isset($_SESSION['login'])) {
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
-                <li><a href="http://localhost/PA_WEB/beranda.php" style="text-decoration: none;">Home</a></li>
-                <li><a href="aboutme.php" style="text-decoration: none;">Profile</a></li>
+                <li><a href="http://localhost/Proyek-Akhir-WEB/beranda.php" style="text-decoration: none;">Home</a></li>
+                <li><a href="profile.php" style="text-decoration: none;">Profile</a></li>
                 <li><a href="pesan.php" style="text-decoration: none;">Buat Pesanan</a></li>
+                <li><a href="tabel-pesanan.php" style="text-decoration: none;">Lihat Pesanan</a></li>
                 <li><a href="logout.php" style="text-decoration: none;">Logout</a></li>
             </ul> 
         </div>

@@ -5,6 +5,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 require "koneksi.php";
+
 if(isset($_GET['id'])){
     $query = mysqli_query($db, "SELECT * FROM laundry JOIN gambar on laundry.id = gambar.id WHERE laundry.id = $_GET[id]");
     $result = mysqli_fetch_assoc($query);
@@ -15,39 +16,38 @@ if(isset($_GET['id'])){
     $jenis = $result['jenis'];
     $oldpict = $result['file'];
 
-
-if(isset($_POST['submit'])){
-    $id = $_GET['id'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['alamat'];
-    $telpon = $_POST['telpon'];
-    $email = $_POST['email'];
-    $jenis = $_POST['jenis'];
-    $gambar_lama = $oldpict;
-    $query = mysqli_query($db, "UPDATE laundry SET nama='$_POST[nama]', alamat='$_POST[alamat]', telpon='$_POST[telpon]', email='$_POST[email]', jenis='$_POST[jenis]' WHERE id=$_GET[id]");
-    if($query){
-        date_default_timezone_set("Asia/Makassar");
-        $date = strtotime("now");
-        $waktu = date("Y-m-d H:i:s", $date);
-        unlink('gambar/'.$gambar_lama);
-        $gambar = $_FILES['gambar']['name'];
-        $nama = $_POST['nama_gambar'];
-        $a = explode('.', $gambar);
-        $ekstensi = strtolower(end($a));
-        $gambar_baru = "$nama.$ekstensi";
-        $tmp = $_FILES['gambar']['tmp_name'];
-        move_uploaded_file($tmp, "gambar/$gambar_baru");
-        $query_gambar = mysqli_query($db, "UPDATE gambar SET nama_file = '$nama', file = '$gambar_baru', waktu = '$waktu' WHERE id = '$id'");
-        if ($query_gambar) {
-            echo"Update Gambar Berhasil";
-            header("Location:data.php");
-        } else{
-            echo"Update Gambar Gagal";
+    if(isset($_POST['submit'])){
+        $id = $_GET['id'];
+        $nama = $_POST['nama'];
+        $alamat = $_POST['alamat'];
+        $telpon = $_POST['telpon'];
+        $email = $_POST['email'];
+        $jenis = $_POST['jenis'];
+        $gambar_lama = $oldpict;
+        $query = mysqli_query($db, "UPDATE laundry SET nama='$_POST[nama]', alamat='$_POST[alamat]', telpon='$_POST[telpon]', email='$_POST[email]', jenis='$_POST[jenis]' WHERE id=$_GET[id]");
+        if($query){
+            date_default_timezone_set("Asia/Makassar");
+            $date = strtotime("now");
+            $waktu = date("Y-m-d H:i:s", $date);
+            unlink('gambar/'.$gambar_lama);
+            $gambar = $_FILES['gambar']['name'];
+            $nama = $_POST['nama_gambar'];
+            $a = explode('.', $gambar);
+            $ekstensi = strtolower(end($a));
+            $gambar_baru = "$nama.$ekstensi";
+            $tmp = $_FILES['gambar']['tmp_name'];
+            move_uploaded_file($tmp, "gambar/$gambar_baru");
+            $query_gambar = mysqli_query($db, "UPDATE gambar SET nama_file = '$nama', file = '$gambar_baru', waktu = '$waktu' WHERE id = '$id'");
+            if ($query_gambar) {
+                echo"Update Gambar Berhasil";
+                header("Location:tabel-pesanan.php");
+            } else{
+                echo"Update Gambar Gagal";
+            }
+        }else{
+            echo "Update Pesanan Gagal";
         }
-    }else{
-        echo "Update Pesanan Gagal";
     }
-}
 }
 ?>
 

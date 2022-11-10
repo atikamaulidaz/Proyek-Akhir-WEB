@@ -10,7 +10,6 @@ if(isset($_POST["submit"])){
         $_SESSION['username'] = $result['username'];
         echo "
         <script>
-            alert('Selamat Datang Admin');
             document.location.href = 'beranda-admin.php';
         </script>
         ";
@@ -52,7 +51,7 @@ if(isset($_POST["submit"])){
 </head>
 <body>
     <div class="header">
-        <div class="nama-header"><a href="index.php">Laundry Express</a></div>
+        <div class="nama-header"><a href="index.php" style="text-decoration: none;">Laundry Express</a></div>
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>

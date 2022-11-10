@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         if(move_uploaded_file($tmp,"gambar/$gambar_baru")){
             $query = mysqli_query($db, "INSERT INTO gambar VALUES ('', $id_gambar, '$nama_gambar', '$gambar_baru', '$waktu')");
             if($query){
-                header("Location: data.php");
+                header("Location: tabel-pesanan.php");
             }
             else{
                 echo "Tambah Pesanan Gagal";
