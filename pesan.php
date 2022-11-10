@@ -38,7 +38,7 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="telpon" class="pesan-item"><br>
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-                <p><b>Jenis Laundry</b></p><br>
+                <p>Jenis Laundry</p><br>
                 <p><input type="radio" name="jenis" value="Reguler Ekonomis" />Reguler Ekonomis</p> <br>
                 <p><input type="radio" name="jenis" value="Laundry Exclusive" />Laundry Exclusive</p><br>
                 <p><input type="radio" name="jenis" value="Laundry Sepatu" />Laundry Sepatu</p> <br>
@@ -47,10 +47,15 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="gambar" class="pesan-item">
+<<<<<<< HEAD
+                <center><li><button><a href="beranda.php" class="button-batal" style="text-decoration: none ; "> Batal</li></button></a> </center>
+                <input type="submit" name="submit" value="Order" class="button-order">
+=======
                 <table>
                     <td><a href="beranda.php" class="button-batal">Batal</a></td>
                     <td><input type="submit" name="submit" value="Order" class="button-order"></td>
                 </table>
+>>>>>>> 4372ed103102260627fa07694fef1d374c236c34
                 </form>
             </center>
         </div>

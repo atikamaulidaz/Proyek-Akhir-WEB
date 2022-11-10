@@ -51,6 +51,9 @@
     justify-content:space-between ;
     align-items: center;
 }
+.header a {
+    color: black;
+}
 
 .nama-header {
     float: left;
@@ -229,7 +232,6 @@ label{
 	border-radius: 10px;
 	padding: 10px 20px;
 }
-
 .button-batal{
     background: rgb(142, 142, 255);
     color: black;
@@ -261,3 +263,4 @@ label{
 .button-order:hover {
     background-color: rgb(61, 61, 124);
 }
+
