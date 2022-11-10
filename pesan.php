@@ -38,17 +38,11 @@ if (!isset($_SESSION['login'])) {
                 <input type="text" name="telpon" class="pesan-item"><br>
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-            </center>
-                <label for="jenis">Jenis Laundry</label><br>
-                <input type="radio" name="jenis" class="pesan-item" value="Regular Ekonomis">
-                <label for="jenis">Regular Ekonomis</label>
-                <input type="radio" name="jenis" class="pesan-item" value="Laundry Exclusive">
-                <label for="jenis">Laundry Exclusive</label>
-                <input type="radio" name="jenis" class="pesan-item" value="Laundry Sepatu">
-                <label for="jenis">Laundry Sepatu</label><br>
-                <input type="radio" name="jenis" class="pesan-item" value="Laundry Bed Cover">
-                <label for="jenis">Laundry Bed Cover</label><br><br>
-            <center>
+                <p>Jenis Laundry</p><br>
+                <p><input type='radio' name='jenis' value='Reguler Ekonomis' />Reguler Ekonomis</p> <br>
+                <p><input type='radio' name='jenis' value='Laundry Exclusive' />Laundry Exclusive</p><br>
+                <p><input type='radio' name='jenis' value='Laundry Sepatu' />Laundry Sepatu</p> <br>
+                <p><input type='radio' name='jenis' value='Laundry Bed Cover' />Laundry Bed Cover</p><br>
                 <label for="nama_gambar">Nama File</label>
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
@@ -57,8 +51,6 @@ if (!isset($_SESSION['login'])) {
                 <input type="submit" name="submit" value="Order" class="button-order">
                 </form>
             </center>
-                
-            
         </div>
     </div>
     <script src="javascript/jquery.js"></script>
