@@ -39,10 +39,10 @@ if (!isset($_SESSION['login'])) {
                 <label for="">Email</label><br>
                 <input type="email" name="email" class="pesan-item"><br>
                 <p>Jenis Laundry</p><br>
-                <p><input type='radio' name='jenis' value='Reguler Ekonomis' />Reguler Ekonomis</p> <br>
-                <p><input type='radio' name='jenis' value='Laundry Exclusive' />Laundry Exclusive</p><br>
-                <p><input type='radio' name='jenis' value='Laundry Sepatu' />Laundry Sepatu</p> <br>
-                <p><input type='radio' name='jenis' value='Laundry Bed Cover' />Laundry Bed Cover</p><br>
+                <p><input type="radio" name="jenis" value="Reguler Ekonomis" />Reguler Ekonomis</p> <br>
+                <p><input type="radio" name="jenis" value="Laundry Exclusive" />Laundry Exclusive</p><br>
+                <p><input type="radio" name="jenis" value="Laundry Sepatu" />Laundry Sepatu</p> <br>
+                <p><input type="radio" name="jenis" value="Laundry Bed Cover" />Laundry Bed Cover</p><br>
                 <label for="nama_gambar">Nama File</label>
                 <input type="text" name="nama_gambar" class="pesan-item">
                 <label for="gambar">Gambar</label>
