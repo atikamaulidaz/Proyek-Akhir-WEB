@@ -1,9 +1,3 @@
-@media only screen and (max-width: 600px) {
-    body .header .nama-header .list-header .cari  .main .logo .penawaran .penawaran-item .footer .nama-footer .tabel center .pesananBox .pesanan .loginBox .login .about-me .data .data-item .regisBox .regis table td tr tbody{
-        width: auto;
-    }
-}
-
 .cari {
     display: flex;
     justify-content: center;
