@@ -23,6 +23,7 @@ require "koneksi.php";
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
+                <li><a href="history.php" style="text-decoration: none;">History</a></li>
                 <li><a href="logout.php" style="text-decoration: none;">Logout</a></li>
             </ul> 
         </div>
