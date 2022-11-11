@@ -36,11 +36,8 @@ require "koneksi.php";
         <table>
             <thead>
                 <tr>
-                    <th colspan="8" class="thead">
+                    <th colspan="10" class="thead">
                         <h3 class="daftar">Daftar Pesanan</h3>
-                    </th>
-                    <th style="width: 20px;" colspan="2">
-                        <a href="pesan.php" class="tambah">Order</a>
                     </th>
                 </tr>
                 <tr>
@@ -60,9 +57,9 @@ require "koneksi.php";
                 $no = 1;
                 if (isset($_GET['submit'])) {
                     $search = $_GET['search'];
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");;
+                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");
                 } else {
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
+                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id" );
                 }
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {

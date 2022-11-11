@@ -36,7 +36,7 @@
 }
 
 .main {
-    padding: 100x 80px;
+    padding: 10px 70px;
 }
 
 body {
@@ -50,7 +50,7 @@ li {
 }
 
 .penawaran {
-    height: 500px;
+    height: auto;
     margin-top: 10px;
     width: auto;
     padding-left: 100px;
@@ -65,8 +65,8 @@ li {
 
 .penawaran-item{
     margin-right: 117px;
-    border-radius: 50%;
-    width: auto;
+    width:auto ;
+    float: left;
 }
 
 .penawaran-item p{
@@ -75,11 +75,13 @@ li {
     margin-top: 30px;
 }
 
-.footer {
+.footer { 
     background-color: #2f5167;
     color: #fff;
     height: 50px;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
 }
 
 .nama-footer {

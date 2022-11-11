@@ -38,25 +38,25 @@ if (!isset($_SESSION['login'])) {
                 <h3 class="nama-penawaran">Jasa Layanan Kami</h3>
             </center>
             <div class="penawaran-item">
-                <img src="images/cash.png" width="200px" height="200px">
+                <img src="images/cash.png" width="180px" height="180px">
                 <center>
                     <p>Regular Ekonomis</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/diamond.png" width="200px" height="200px">
+                <img src="images/diamond.png" width="180px" height="180px">
                 <center>
                     <p>Laundry Exclusive</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/shoes.png" width="200px" height="200px">
+                <img src="images/shoes.png" width="180px" height="180px">
                 <center>
                     <p>Laundry Sepatu</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/bed-sheets.png" width="200px" height="200px">
+                <img src="images/bed-sheets.png" width="180px" height="180px">
                 <center>
                     <p>Laundry Bed Cover</p>
                 </center>
