@@ -64,8 +64,9 @@ li {
 }
 
 .penawaran-item{
-    margin-right: 117px;
-    border-radius: 50%;
+    float: left;
+    margin-right: 80px;
+    /* border-radius: 50%; */
     width: auto;
 }
 
