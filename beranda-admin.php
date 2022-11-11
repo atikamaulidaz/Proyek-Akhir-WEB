@@ -77,7 +77,7 @@ require "koneksi.php";
                     <td><?=$row['telpon']?></td>
                     <td><?=$row['email']?></td>
                     <td><?=$row['jenis']?></td>
-                    <td><img src="gambar/<?=$row['file']?>" width="60px" ></td>
+                    <td><img src="gambar/<?=$row['file']?>" width="50px" height="50px" ></td>
                     <td><?=$row['waktu']?></td>
 
                     <td class="edit">
