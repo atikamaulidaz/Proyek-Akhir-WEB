@@ -38,25 +38,41 @@ if (!isset($_SESSION['login'])) {
                 <h3 class="nama-penawaran">Jasa Layanan Kami</h3>
             </center>
             <div class="penawaran-item">
+<<<<<<< HEAD
                 <img src="images/cash.png" width="180px" height="180px">
+=======
+                <img src="images/cash.png" width="270px" height="270px">
+>>>>>>> 0540c0fbd765af85cd281b2cea63d7feddce7d48
                 <center>
                     <p>Regular Ekonomis</p>
                 </center>
             </div>
             <div class="penawaran-item">
+<<<<<<< HEAD
                 <img src="images/diamond.png" width="180px" height="180px">
+=======
+                <img src="images/diamond.png" width="270px" height="270px">
+>>>>>>> 0540c0fbd765af85cd281b2cea63d7feddce7d48
                 <center>
                     <p>Laundry Exclusive</p>
                 </center>
             </div>
             <div class="penawaran-item">
+<<<<<<< HEAD
                 <img src="images/shoes.png" width="180px" height="180px">
+=======
+                <img src="images/shoes.png" width="270px" height="270px">
+>>>>>>> 0540c0fbd765af85cd281b2cea63d7feddce7d48
                 <center>
                     <p>Laundry Sepatu</p>
                 </center>
             </div>
             <div class="penawaran-item">
+<<<<<<< HEAD
                 <img src="images/bed-sheets.png" width="180px" height="180px">
+=======
+                <img src="images/bed-sheets.png" width="270px" height="270px">
+>>>>>>> 0540c0fbd765af85cd281b2cea63d7feddce7d48
                 <center>
                     <p>Laundry Bed Cover</p>
                 </center>
