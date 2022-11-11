@@ -32,35 +32,37 @@ if (!isset($_SESSION['login'])) {
         <div class="logo">
             <center><img src="images/laundry.png"></center>
         </div>
+        <center>
         <div class="penawaran">
             <center>
                 <h3 class="nama-penawaran">Jasa Layanan Kami</h3>
             </center>
             <div class="penawaran-item">
-                <img src="images/cash.png" width="270px" height="270px">
+                <img src="images/cash.png" width="200px" height="200px">
                 <center>
                     <p>Regular Ekonomis</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/diamond.png" width="270px" height="270px">
+                <img src="images/diamond.png" width="200px" height="200px">
                 <center>
                     <p>Laundry Exclusive</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/shoes.png" width="270px" height="270px">
+                <img src="images/shoes.png" width="200px" height="200px">
                 <center>
                     <p>Laundry Sepatu</p>
                 </center>
             </div>
             <div class="penawaran-item">
-                <img src="images/bed-sheets.png" width="270px" height="270px">
+                <img src="images/bed-sheets.png" width="200px" height="200px">
                 <center>
                     <p>Laundry Bed Cover</p>
                 </center>
             </div>
         </div>
+        </center>
     </div>
     <div class="footer">
         <div class="nama-footer"><center>@Copyright 2022 - by Kelompok 4 B1 2020</center></div>

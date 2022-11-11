@@ -53,6 +53,7 @@ li {
     height: 500px;
     margin-top: 10px;
     width: auto;
+    padding-left: 100px;
 }
 
 .nama-penawaran {
@@ -63,7 +64,6 @@ li {
 }
 
 .penawaran-item{
-    float: left;
     margin-right: 117px;
     border-radius: 50%;
     width: auto;
@@ -223,4 +223,3 @@ label{
 .button-order:hover {
     background-color: rgb(61, 61, 124);
 }
-
