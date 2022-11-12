@@ -50,7 +50,7 @@ require "koneksi.php";
                     $search = $_GET['search'];
                     $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");
                 } else {
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id" );
+                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
                 } 
                 if (isset($_GET['submit'])) {
                     $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE id_history = id");
