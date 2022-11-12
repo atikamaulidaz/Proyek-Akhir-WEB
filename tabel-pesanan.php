@@ -53,14 +53,8 @@ require "koneksi.php";
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $no = 1;
-                if (isset($_GET['submit'])) {
-                    $search = $_GET['search'];
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");
-                } else {
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id" );
-                }
+            <?php
+                $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>

@@ -19,7 +19,7 @@ if(isset($_POST["submit"])){
         $username = $result['username'];
         if(password_verify($password,$result['password'])){
             $_SESSION['login'] = true;
-            $_SESSION['id_user'] = $result['id'];
+            $_SESSION['id_user'] = $result['id_user'];
             $_SESSION['nama'] = $result["nama"];
             $_SESSION['username'] = $result['username'];
             echo "
