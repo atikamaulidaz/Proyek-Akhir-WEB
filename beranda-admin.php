@@ -23,6 +23,7 @@ require "koneksi.php";
         <div class="list-header">
             <ul>
                 <li><button id="switch"><img src="images/night-mode.png" width="50px" height="50px"></button></li>
+                <li><a href="history.php" style="text-decoration: none;">History</a></li>
                 <li><a href="logout.php" style="text-decoration: none;">Logout</a></li>
             </ul> 
         </div>
@@ -77,7 +78,7 @@ require "koneksi.php";
                     <td><?=$row['telpon']?></td>
                     <td><?=$row['email']?></td>
                     <td><?=$row['jenis']?></td>
-                    <td><img src="gambar/<?=$row['file']?>" width="60px" ></td>
+                    <td><img src="gambar/<?=$row['file']?>" width="50px" height="50px" ></td>
                     <td><?=$row['waktu']?></td>
 
                     <td class="edit">
