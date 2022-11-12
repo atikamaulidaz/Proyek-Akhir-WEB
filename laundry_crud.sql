@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Nov 2022 pada 14.28
+-- Waktu pembuatan: 12 Nov 2022 pada 17.31
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.23
 
@@ -40,12 +40,7 @@ CREATE TABLE `gambar` (
 --
 
 INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
-(19, 37, 'jeno', 'jeno.png', '2022-10-28 14:28:04'),
-(21, 40, 'Selimut', 'Selimut.png', '2022-10-28 14:33:42'),
-(22, 41, 'sepatu', 'sepatu.png', '2022-10-28 14:34:17'),
-(23, 42, 'SEPATU', 'SEPATU.jfif', '2022-11-10 12:22:09'),
-(24, 43, 'jpg', 'jpg.jpg', '2022-11-11 11:12:27'),
-(25, 44, 'jpg', 'jpg.jpg', '2022-11-11 21:21:50');
+(28, 47, 'apakah.png.', 'apakah.png..jpg', '2022-11-12 23:39:34');
 
 -- --------------------------------------------------------
 
@@ -85,12 +80,7 @@ CREATE TABLE `laundry` (
 --
 
 INSERT INTO `laundry` (`id`, `nama`, `alamat`, `telpon`, `email`, `jenis`) VALUES
-(37, 'Lee Jeno', 'Korea diselatan', '081234567890', 'jenolee@gmail.com', 'Laundry Sepatu'),
-(40, 'Atika', 'Samarinda', '08987654321', 'atika@gmail.com', 'Regular Ekonomis'),
-(41, 'Zhong Chenle', 'China', '0898765554', 'zhongchenle@gmail.com', 'Laundry Exclusive'),
-(42, 'Atika M.Z', 'Samarinda', '08521234567', 'atikamaulidazahra@gmail.com', 'Laundry Bed Cover'),
-(43, 'lutfi', 'bumi', '09887555522', 'lutfi@gmail.com', 'Laundry Sepatu'),
-(44, 'PutriW', 'Damanhuri', '08009988666', 'putriwahdaniyahiskandar@gmail.com', 'Laundry Exclusive');
+(47, 'atika', 'sempaja', '082121212121', 'atika@gmail.com', 'Laundry Bed Cover');
 
 -- --------------------------------------------------------
 
@@ -156,19 +146,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `history`
 --
 ALTER TABLE `history`
-  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `laundry`
 --
 ALTER TABLE `laundry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

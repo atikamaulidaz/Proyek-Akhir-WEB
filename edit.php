@@ -75,20 +75,20 @@ if(isset($_GET['id'])){
             <center>
                 <div class="coba-pesan"><center><img src="images/edit-info.png" width="200px" height="200px"></center></div>
                 <form action="" method="post" enctype="multipart/form-data">
-                <label for="">Nama Lengkap</label><br>
+                <label for=""><b>Nama Lengkap </b></label><br>
                 <input type="text" name="nama" class="pesan-item" value='<?=$nama?>'><br>
-                <label for="">Alamat Lengkap</label><br>
+                <label for=""><b>Alamat Lengkap </b></label><br>
                 <input type="text" name="alamat" class="pesan-item" value='<?=$alamat?>'><br>
-                <label for="">No. HP</label><br>
+                <label for=""><b>No. HP </b></label><br>
                 <input type="text" name="telpon" class="pesan-item" value='<?=$telpon?>'><br>
-                <label for="">Email</label><br>
+                <label for=""><b>Email </b></label><br>
                 <input type="email" name="email" class="pesan-item" value='<?=$email?>'><br>
-                <label for="">Jenis Laundry</label><br>
-                <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p>
+                <p><b>Jenis Laundry : </b></p><br>
+                <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p><br>
                 <input type="text" name="jenis" class="pesan-item" value='<?=$jenis?>'><br>
-                <label for="nama_gambar">Nama File</label>
+                <label for="nama_gambar"><b>Nama File </b></label>
                 <input type="text" name="nama_gambar" class="pesan-item" value='<?=$oldpict?>'>
-                <label for="gambar">Gambar</label>
+                <label for="gambar"><b>Gambar </b></label>
                 <input type="file" name="gambar" class="pesan-item" value='<?=$gambar?>'>
                 <input type="submit" name="submit" value="Edit" class="button-edit">
                 </form>
