@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 10:44 PM
+-- Generation Time: Nov 13, 2022 at 10:46 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -40,9 +40,7 @@ CREATE TABLE `gambar` (
 --
 
 INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
-(28, 47, 'apakah.png.', 'apakah.png..jpg', '2022-11-12 23:39:34'),
-(29, 48, 'siapa', 'siapa.jfif', '2022-11-13 05:28:13'),
-(30, 49, 'chenle', 'chenle.jfif', '2022-11-13 05:38:21');
+(31, 50, 'shoes', 'shoes.jfif', '2022-11-13 17:32:19');
 
 -- --------------------------------------------------------
 
@@ -52,8 +50,6 @@ INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
 
 CREATE TABLE `history` (
   `id_history` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
   `nama` varchar(64) NOT NULL,
   `alamat` varchar(64) NOT NULL,
   `jenis` varchar(64) NOT NULL,
@@ -83,9 +79,7 @@ CREATE TABLE `laundry` (
 --
 
 INSERT INTO `laundry` (`id`, `id_user`, `nama`, `alamat`, `telpon`, `email`, `jenis`) VALUES
-(47, 1, 'atika', 'sempaja', '082121212121', 'atika@gmail.com', 'Laundry Bed Cover'),
-(48, 0, 'Rista', 'Samarinda', '08123456', '2771@smaridasa.web.id', 'Laundry Bed Cover'),
-(49, 8, 'Chenle', 'Cina', '0987654321', 'chenle@gmail.com', 'Laundry Bed Cover');
+(50, 50, 'Atika M.Z', 'Samarinda', '08521234567', 'atikamaulidazahra@gmail.com', 'Laundry Sepatu');
 
 -- --------------------------------------------------------
 
@@ -128,9 +122,7 @@ ALTER TABLE `gambar`
 -- Indexes for table `history`
 --
 ALTER TABLE `history`
-  ADD PRIMARY KEY (`id_history`),
-  ADD KEY `history_ibfk_1` (`id_user`),
-  ADD KEY `id` (`id`);
+  ADD PRIMARY KEY (`id_history`);
 
 --
 -- Indexes for table `laundry`
@@ -153,7 +145,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `history`
@@ -165,7 +157,7 @@ ALTER TABLE `history`
 -- AUTO_INCREMENT for table `laundry`
 --
 ALTER TABLE `laundry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -182,19 +174,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `gambar`
   ADD CONSTRAINT `gambar_ibfk_1` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `history`
---
-ALTER TABLE `history`
-  ADD CONSTRAINT `history_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `history_ibfk_2` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `laundry`
---
-ALTER TABLE `laundry`
-  ADD CONSTRAINT `fk_hub` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
