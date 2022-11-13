@@ -14,6 +14,7 @@ if(isset($_POST['submit'])){
     $date = strtotime("now");
     $waktu = date("Y-m-d H:i:s", $date);
     $query = mysqli_query($db, "INSERT INTO laundry (nama,alamat,telpon,email,jenis) VALUES ('$nama','$alamat','$telpon','$email','$jenis')");
+    $query = mysqli_query($db, "UPDATE laundry SET id_user = id");
     if(!empty($_FILES['gambar']['name'])){
         $query = mysqli_query($db, "SELECT * FROM laundry WHERE nama='$nama'");
         $result = mysqli_fetch_assoc($query);

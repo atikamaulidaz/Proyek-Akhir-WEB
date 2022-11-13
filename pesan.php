@@ -30,22 +30,22 @@ if (!isset($_SESSION['login'])) {
             <center>
                 <div class="coba-pesan"><center><img src="images/order-now.png" width="200px" height="150px"></center></div>
                 <form action="tambah.php" method="post" enctype="multipart/form-data">
-                <label for="">Nama Lengkap</label><br>
+                <label for=""><b>Nama Lengkap</b></label><br>
                 <input type="text" name="nama" class="pesan-item"><br>
-                <label for="">Alamat Lengkap</label><br>
+                <label for=""><b>Alamat Lengkap</b></label><br>
                 <input type="text" name="alamat" class="pesan-item"><br>
-                <label for="">No. HP</label><br>
+                <label for=""><b>No. HP</b></label><br>
                 <input type="text" name="telpon" class="pesan-item"><br>
-                <label for="">Email</label><br>
+                <label for=""><b>Email </b></label><br>
                 <input type="email" name="email" class="pesan-item"><br>
-                <p><b>Jenis Laundry : </b></p><br>
+                <p><b>Jenis Laundry :</b></p><br>
                 <p><input type="radio" name="jenis" value="Regular Ekonomis">Regular Ekonomis</p>
                 <p><input type="radio" name="jenis" value="Laundry Exclusive">Laundry Exclusive</p>
                 <p><input type="radio" name="jenis" value="Laundry Sepatu">Laundry Sepatu</p>
                 <p><input type="radio" name="jenis" value="Laundry Bed Cover">Laundry Bed Cover</p><br>
-                <label for="nama_gambar">Nama File</label>
+                <label for="nama_gambar"><b>Nama File</b></label>
                 <input type="text" name="nama_gambar" class="pesan-item">
-                <label for="gambar">Gambar</label>
+                <label for="gambar"><b>Gambar</b></label>
                 <input type="file" name="gambar" class="pesan-item">
                 <table>    
                     <td><a href="beranda.php" class="button-batal">Batal</a></td>
