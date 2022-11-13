@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if (!isset($_SESSION['login']) && ($_SESSION['username'])) {
+if (!isset($_SESSION['login'])) {
     header("Location: login.php");
 }
 require "koneksi.php";
@@ -53,8 +53,14 @@ require "koneksi.php";
                 </tr>
             </thead>
             <tbody>
-            <?php
-                $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
+                <?php
+                $no = 1;
+                if (isset($_GET['submit'])) {
+                    $search = $_GET['search'];
+                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");
+                } else {
+                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id" );
+                }
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>

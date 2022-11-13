@@ -84,8 +84,10 @@ if(isset($_GET['id'])){
                 <label for=""><b>Email </b></label><br>
                 <input type="email" name="email" class="pesan-item" value='<?=$email?>'><br>
                 <p><b>Jenis Laundry : </b></p><br>
-                <p>(Regular Ekonomis, Laundry Exclusive, Laundry Sepatu, Laundry Bed Cover)</p><br>
-                <input type="text" name="jenis" class="pesan-item" value='<?=$jenis?>'><br>
+                <p><input type="radio" name="jenis" value="Regular Ekonomis">Regular Ekonomis</p>
+                <p><input type="radio" name="jenis" value="Laundry Exclusive">Laundry Exclusive</p>
+                <p><input type="radio" name="jenis" value="Laundry Sepatu">Laundry Sepatu</p>
+                <p><input type="radio" name="jenis" value="Laundry Bed Cover">Laundry Bed Cover</p><br>
                 <label for="nama_gambar"><b>Nama File </b></label>
                 <input type="text" name="nama_gambar" class="pesan-item" value='<?=$oldpict?>'>
                 <label for="gambar"><b>Gambar </b></label>
