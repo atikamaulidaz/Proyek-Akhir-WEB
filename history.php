@@ -45,16 +45,12 @@ require "koneksi.php";
             </thead>
             <tbody>
                 <?php
-                $no = 1;
+                $no = 1;     
                 if (isset($_GET['submit'])) {
-                    $search = $_GET['search'];
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE nama LIKE '%$search%'");
+                        $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE id_history = id");
                 } else {
                     $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
-                } 
-                if (isset($_GET['submit'])) {
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE id_history = id");
-                }
+                }              
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>
