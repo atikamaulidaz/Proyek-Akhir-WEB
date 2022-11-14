@@ -4,6 +4,7 @@ if (!isset($_SESSION['login'])) {
     header("Location: login.php");
 }
 require "koneksi.php";
+$id_user = $_SESSION['id_user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +55,7 @@ require "koneksi.php";
             </thead>
             <tbody>
                 <?php
-                $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id" );
+                $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE id_user=$id_user" );
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>

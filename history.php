@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if (!isset($_SESSION['login']) && ($_SESSION['username'])) {
     header("Location: login.php");
@@ -39,18 +39,12 @@ require "koneksi.php";
                     <th nowrap>Nama Lengkap</th>
                     <th>Alamat Lengkap</th>
                     <th>Jenis Laundry</th>
-                    <th>Gambar</th>
                     <th>Waktu</th>
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $no = 1;     
-                if (isset($_GET['submit'])) {
-                        $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id WHERE id_history = id");
-                } else {
-                    $query = mysqli_query($db, "SELECT * FROM laundry INNER JOIN gambar ON laundry.id=gambar.id");
-                }              
+                <?php    
+                $query = mysqli_query($db, "SELECT * FROM history" );
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($query)) {
                 ?>
@@ -59,7 +53,6 @@ require "koneksi.php";
                     <td nowrap><?=$row['nama']?></td>
                     <td><?=$row['alamat']?></td>
                     <td><?=$row['jenis']?></td>
-                    <td><img src="gambar/<?=$row['file']?>" width="60px" ></td>
                     <td><?=$row['waktu']?></td>
                 </tr>
                 <?php

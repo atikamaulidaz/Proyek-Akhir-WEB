@@ -8,6 +8,7 @@ if(isset($_POST["submit"])){
         $_SESSION['login'] = true;
         $_SESSION['nama'] = $result["nama"];
         $_SESSION['username'] = $result['username'];
+        $_SESSION['role'] = 'admin';
         echo "
         <script>
             document.location.href = 'beranda-admin.php';
@@ -22,6 +23,7 @@ if(isset($_POST["submit"])){
             $_SESSION['id_user'] = $result['id_user'];
             $_SESSION['nama'] = $result["nama"];
             $_SESSION['username'] = $result['username'];
+            $_SESSION['role'] = 'user';
             echo "
             <script>
                 alert('Selamat Datang $username');

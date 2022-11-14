@@ -40,11 +40,8 @@ require "koneksi.php";
         <table>
             <thead>
                 <tr>
-                    <th colspan="8" class="thead">
+                    <th colspan="10" class="thead">
                         <h3 class="daftar">Daftar Pesanan</h3>
-                    </th>
-                    <th style="width: 20px;" colspan="2">
-                        <a href="pesan.php" class="tambah">Order</a>
                     </th>
                 </tr>
                 <tr>
