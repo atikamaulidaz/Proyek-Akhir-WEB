@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2022 at 01:01 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Waktu pembuatan: 14 Nov 2022 pada 10.18
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,13 +36,11 @@ CREATE TABLE `gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `gambar`
+-- Dumping data untuk tabel `gambar`
 --
 
 INSERT INTO `gambar` (`id_gambar`, `id`, `nama_file`, `file`, `waktu`) VALUES
-(25, 44, 'siapa', 'siapa.jfif', '2022-11-13 19:16:07'),
-(26, 45, 'kenapa', 'kenapa.jfif', '2022-11-13 19:16:53'),
-(27, 46, 'sepatoooo', 'sepatoooo.jfif', '2022-11-13 19:21:12');
+(29, 50, 'bajuan', 'bajuan.png', '2022-11-14 16:39:44');
 
 -- --------------------------------------------------------
 
@@ -54,14 +52,18 @@ CREATE TABLE `history` (
   `id_history` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_gambar` int(11) NOT NULL,
   `nama` varchar(64) NOT NULL,
   `alamat` varchar(64) NOT NULL,
   `jenis` varchar(64) NOT NULL,
-  `nama_file` varchar(64) NOT NULL,
-  `file` varchar(64) NOT NULL,
   `waktu` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `history`
+--
+
+INSERT INTO `history` (`id_history`, `id`, `id_user`, `nama`, `alamat`, `jenis`, `waktu`) VALUES
+(4, 50, 1, 'atika', 'jl. jalan', 'Laundry Bed Cover', '2022-11-14 16:20:33');
 
 -- --------------------------------------------------------
 
@@ -80,13 +82,11 @@ CREATE TABLE `laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `laundry`
+-- Dumping data untuk tabel `laundry`
 --
 
 INSERT INTO `laundry` (`id`, `id_user`, `nama`, `alamat`, `telpon`, `email`, `jenis`) VALUES
-(44, 44, 'Atika M.Z', 'Samarinda', '08521234567', 'atikamaulidazahra@gmail.com', 'Regular Ekonomis'),
-(45, 45, 'Atika Maulida Zahra', 'Sempaja', '0987654321', '2771@smaridasa.web.id', 'Laundry Exclusive'),
-(46, 46, 'Rista', 'Jalan Abdul Wahab Syahrani 4 Blok S No. 16', '0987654321', 'chenle@gmail.com', 'Laundry Sepatu');
+(50, 1, 'meracik', 'jl. buntu', '08009988666', 'atika@gmail.com', 'Laundry Sepatu');
 
 -- --------------------------------------------------------
 
@@ -102,13 +102,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `username`, `password`) VALUES
 (1, 'Atika Maulida Zahra', 'atika', '$2y$10$PZp9ctjmrchSwclm6ku7/eLc.SEK7RjKIJ0rPWkdIJDqHDH9LL9Ee'),
 (3, 'admin', 'admin', '$2y$10$D/loUMYdW36xSxcV1UkfNe0xNcRgMm1JAdH6PR66SXSYT.VsnW/La'),
-(4, 'putri', 'putri', '$2y$10$53ZGcuNrMchtKCAZ49oBCuHjSzDYXYWP7TXio1QBDzKMMwoJ0MvUO');
+(4, 'putri', 'putri', '$2y$10$53ZGcuNrMchtKCAZ49oBCuHjSzDYXYWP7TXio1QBDzKMMwoJ0MvUO'),
+(5, 'putri wahdaniyah iskandar', 'puput', '$2y$10$7eGh10wJLZlT2wEa9cYNBe/VBqHksXkwFqKlxbG6BfgQXeeAvzvuK');
 
 --
 -- Indexes for dumped tables
@@ -127,14 +128,14 @@ ALTER TABLE `gambar`
 ALTER TABLE `history`
   ADD PRIMARY KEY (`id_history`),
   ADD KEY `fk_history` (`id`),
-  ADD KEY `fk_history1` (`id_user`),
-  ADD KEY `fk_history2` (`id_gambar`);
+  ADD KEY `fk_history1` (`id_user`);
 
 --
 -- Indeks untuk tabel `laundry`
 --
 ALTER TABLE `laundry`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_fk` (`id_user`);
 
 --
 -- Indeks untuk tabel `user`
@@ -150,25 +151,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT untuk tabel `history`
 --
 ALTER TABLE `history`
-  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `laundry`
 --
 ALTER TABLE `laundry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -184,9 +185,14 @@ ALTER TABLE `gambar`
 -- Ketidakleluasaan untuk tabel `history`
 --
 ALTER TABLE `history`
-  ADD CONSTRAINT `fk_history` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_history1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_history2` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_history3` FOREIGN KEY (`id`) REFERENCES `laundry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `laundry`
+--
+ALTER TABLE `laundry`
+  ADD CONSTRAINT `user_fk` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
